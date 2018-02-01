@@ -5,10 +5,12 @@ class MiClase
 	attr_accessor :name
 	def initialize(name)
 		@name = name
+		@@name = 'MiClase'
 	end
 
 	def self.saludar
 		"Hola! Soy la clase #{self}"
+		"Hola! Soy la clase #{@@name}"
 	end
 end
 
