@@ -8,7 +8,7 @@ class Vehicle
 	end
 	
 	def engine_start
-		puts @start = true
+		@@start = true
 	end
 end
 
@@ -26,7 +26,7 @@ class Car < Vehicle
 	
 	#4- metodo heredado debe realiazar 2 puts
 	def engine_start
-		super
+		super #cambia la variable a true
 		puts "El motor se ha encendido!!"
 	end
 end
