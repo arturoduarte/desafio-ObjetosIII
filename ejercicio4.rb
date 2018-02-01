@@ -7,7 +7,7 @@ class Alumno
 		@nota4 = nota4
 	end
 	
-	def self.read_file(nombre_archivo)
+	def self.read_file(nombre_archivo = 'notas.txt')
 		alumnos = []
 		data = []
 		File.open(nombre_archivo, 'r') { |file| data = file.readlines }
@@ -15,9 +15,9 @@ class Alumno
 			alumnos << Alumno.new(*alumno.split(', '))
 		end
 		
-		print alumnos
+		alumnos
 	end
 end
 
 
-Alumno.read_file('notas.txt')
+Alumno.read_file
